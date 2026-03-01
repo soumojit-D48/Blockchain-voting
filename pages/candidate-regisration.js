@@ -10,6 +10,8 @@ import images from "../assets";
 import Button from "../components/Button/Button";
 import Input from "../components/Input/Input";
 import Loader from "../components/Loader";
+import CustomCursor from "@/components/ciivicchain/CustomCursor";
+
 
 const candidateRegisration = () => {
   const [fileUrl, setFileUrl] = useState(null);
@@ -46,6 +48,7 @@ const candidateRegisration = () => {
   }, []);
   return (
     <div className={Style.createVoter}>
+    <CustomCursor />
       <div>
         {fileUrl && (
           <div className={Style.voterInfo}>
@@ -144,7 +147,7 @@ const candidateRegisration = () => {
           <Input
             inputType="text"
             title="Age"
-            placeholder="Candidate Position"
+            placeholder="Candidate Age"
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, age: e.target.value })
             }
