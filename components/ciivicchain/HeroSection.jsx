@@ -94,6 +94,7 @@ export default function HeroSection() {
           <button
             className="px-8 py-4 rounded-full text-[#F5F5F5] font-semibold text-base border border-[#F5F5F5]/20 transition-all duration-300 hover:border-[#FF9D00] hover:text-[#FF9D00]"
             style={{ fontFamily: "'Syne', sans-serif" }}
+            onClick={() => document.getElementById('see-metaballot-in-action')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View Demo
           </button>

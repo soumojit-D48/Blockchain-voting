@@ -35,7 +35,7 @@ export default function DemoVideoSection() {
   };
 
   return (
-    <section ref={ref} className="py-36 px-6 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+    <section id="see-metaballot-in-action" ref={ref} className="py-36 px-6 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 60%, rgba(255,157,0,0.06) 0%, transparent 70%)' }}
