@@ -54,7 +54,7 @@ export default function DemoVideoSection() {
             style={{ fontFamily: "'Syne', sans-serif" }}
             className="text-4xl md:text-6xl font-bold text-[#F5F5F5] mb-5"
           >
-            See CivicChain{' '}
+            See MetaBallot{' '}
             <span className="text-[#FF9D00]">In Action</span>
           </h2>
           <p className="text-[#888] text-lg max-w-2xl mx-auto">

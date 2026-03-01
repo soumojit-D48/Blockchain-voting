@@ -97,7 +97,7 @@ export default function FinalCTASection() {
             <span style={{ fontFamily: "'Syne', sans-serif" }} className="text-sm text-[#888]">CivicChain</span>
           </div>
           <p style={{ fontFamily: "'DM Mono', monospace" }} className="text-xs text-[#888]/60">
-            © 2025 CivicChain &nbsp;•&nbsp; Built on Ethereum &nbsp;•&nbsp; Open Source &nbsp;•&nbsp;
+            © 2025 MetaBallot &nbsp;•&nbsp; Built on Ethereum &nbsp;•&nbsp; Open Source &nbsp;•&nbsp;
             <a href="#" className="hover:text-[#FF9D00] transition-colors"> Contact</a>
           </p>
           <div className="flex items-center gap-2">

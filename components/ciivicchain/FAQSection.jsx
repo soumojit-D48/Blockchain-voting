@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: 'Is my identity visible on the blockchain?',
-    a: 'No. CivicChain uses zero-knowledge proofs to verify voter eligibility without revealing who you are. Your wallet address is never directly linked to your vote on the public ledger.',
+    a: 'No. MetaBallot uses zero-knowledge proofs to verify voter eligibility without revealing who you are. Your wallet address is never directly linked to your vote on the public ledger.',
     mono: 'identity.leak = 0 // zk-SNARK verified',
   },
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Which blockchain network is used?',
-    a: 'CivicChain currently deploys on Ethereum Sepolia Testnet for development and Ethereum Mainnet for production elections. Enterprise clients can request deployment on private EVM-compatible chains.',
+    a: 'MetaBallot currently deploys on Ethereum Sepolia Testnet for development and Ethereum Mainnet for production elections. Enterprise clients can request deployment on private EVM-compatible chains.',
     mono: 'chain.id = [11155111, 1, "custom-evm"]',
   },
 ];

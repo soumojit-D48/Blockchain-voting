@@ -87,6 +87,7 @@ export default function HeroSection() {
           <button
             className="px-8 py-4 rounded-full text-black font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,157,0,0.35)]"
             style={{ background: '#FF9D00', fontFamily: "'Syne', sans-serif" }}
+            onClick={() => (window.location.href = '/home')}
           >
             Start Voting →
           </button>
