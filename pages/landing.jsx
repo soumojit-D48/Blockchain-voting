@@ -1,27 +1,29 @@
-import CustomCursor from '@/components/ciivicchain/CustomCursor';
-import NavBar from '@/components/NavBar/NavBar';
-import HeroSection from '@/components/ciivicchain/HeroSection';
-import FeaturesSection from '@/components/ciivicchain/FeaturesSection';
-import HowItWorksSection from '@/components/ciivicchain/HowItWorksSection';
-import DataFunnelSection from '@/components/ciivicchain/DataFunnelSection';
-import DemoVideoSection from '@/components/ciivicchain/DemoVideoSection';
-import TransparencySection from '@/components/ciivicchain/TransparencySection';
-import UseCasesSection from '@/components/ciivicchain/UseCasesSection';
-import DashboardSection from '@/components/ciivicchain/DashboardSection';
-import TechStackSection from '@/components/ciivicchain/TechStackSection';
-import FAQSection from '@/components/ciivicchain/FAQSection';
-import FinalCTASection from '@/components/ciivicchain/FinalCTASection';
+import CustomCursor from "@/components/landing-components/CustomCursor";
+import NavBar from "@/components/NavBar/NavBar";
+import HeroSection from "@/components/landing-components/HeroSection";
+import FeaturesSection from "@/components/landing-components/FeaturesSection";
+import HowItWorksSection from "@/components/landing-components/HowItWorksSection";
+import DataFunnelSection from "@/components/landing-components/DataFunnelSection";
+import DemoVideoSection from "@/components/landing-components/DemoVideoSection";
+import TransparencySection from "@/components/landing-components/TransparencySection";
+import UseCasesSection from "@/components/landing-components/UseCasesSection";
+import DashboardSection from "@/components/landing-components/DashboardSection";
+import TechStackSection from "@/components/landing-components/TechStackSection";
+import FAQSection from "@/components/landing-components/FAQSection";
+import FinalCTASection from "@/components/landing-components/FinalCTASection";
+import ParticleCanvas from "@/components/landing/ParticleCanvas";
 
 export default function LandingPage() {
   return (
     <div
       className="relative"
-      style={{ background: '#0A0A0A', fontFamily: "'Syne', sans-serif" }}
+      style={{ background: "#0A0A0A", fontFamily: "'Syne', sans-serif" }}
     >
       <CustomCursor />
       <NavBar />
 
       <HeroSection />
+      <ParticleCanvas/>
       <FeaturesSection />
       <HowItWorksSection />
       <DataFunnelSection />

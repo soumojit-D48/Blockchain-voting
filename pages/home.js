@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { VotingContext } from "../context/Voter";
 import Style from "../styles/index.module.css";
 import Card from "../components/card/card";
-import CustomCursor from "@/components/ciivicchain/CustomCursor";
+import CustomCursor from "@/components/landing-components/CustomCursor";
 
 const Home = () => {
   const router = useRouter();

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import VoterCard from "../components/voterCard/voterCard";
 import Style from "../styles/voterList.module.css";
-import CustomCursor from "@/components/ciivicchain/CustomCursor";
+import CustomCursor from "@/components/landing-components/CustomCursor";
 
 import { VotingContext } from "../context/Voter";
 const voterList = () => {

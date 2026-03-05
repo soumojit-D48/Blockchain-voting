@@ -10,7 +10,7 @@ import images from "../assets";
 import Button from "../components/Button/Button";
 import Input from "../components/Input/Input";
 import Loader from "../components/Loader";
-import CustomCursor from "@/components/ciivicchain/CustomCursor";
+import CustomCursor from "@/components/landing-components/CustomCursor";
 
 const allowedVoters = () => {
   const [fileUrl, setFileUrl] = useState(null);
