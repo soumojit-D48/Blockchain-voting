@@ -11,7 +11,6 @@ import DashboardSection from "@/components/landing-components/DashboardSection";
 import TechStackSection from "@/components/landing-components/TechStackSection";
 import FAQSection from "@/components/landing-components/FAQSection";
 import FinalCTASection from "@/components/landing-components/FinalCTASection";
-import ParticleCanvas from "@/components/landing/ParticleCanvas";
 
 export default function LandingPage() {
   return (
@@ -23,7 +22,6 @@ export default function LandingPage() {
       <NavBar />
 
       <HeroSection />
-      <ParticleCanvas/>
       <FeaturesSection />
       <HowItWorksSection />
       <DataFunnelSection />

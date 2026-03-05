@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import HeroParticles from './HeroParticles';
+import ParticleCanvas from '@/components/landing-components/ParticleCanvas';
 import { ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
@@ -15,7 +15,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20"
       style={{ background: '#0A0A0A' }}
     >
-      <HeroParticles />
+      <ParticleCanvas cursorFollow={true} />
 
       {/* Radial glow */}
       <div
