@@ -1,6 +1,29 @@
 # MetaBallot
 
+[//]: # (![GitHub stars]&#40;https://img.shields.io/github/stars/your-repo/metaballot?style=social&#41;)
+[//]: # (![GitHub license]&#40;https://img.shields.io/github/license/your-repo/metaballot&#41;)
+[//]: # (![Next.js]&#40;https://img.shields.io/badge/Next.js-12-black&#41;)
+[//]: # (![Solidity]&#40;https://img.shields.io/badge/Solidity-%5E0.8.0-blue&#41;)
+
 A decentralized, blockchain-based voting platform built on Ethereum that ensures transparent, tamper-proof, and anonymous elections. Every vote is recorded on-chain, making results publicly auditable while preserving voter anonymity through wallet-based authentication.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Smart Contract](#smart-contract)
+- [Supported Networks](#supported-networks)
+- [Deployment](#deployment)
+- [Usage Flow](#usage-flow)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -60,12 +83,39 @@ Perfect for organizations, DAOs, communities, and institutions requiring trustle
 
 ---
 
+## How It Works
+
+```
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│   Organizer     │────▶│  Smart Contract  │────▶│   Blockchain    │
+│  (Owner)        │     │   (Ethereum)     │     │   (On-chain)    │
+│                 │     │                  │     │                 │
+│ - Add candidates│     │ - Record votes   │     │ - Immutable     │
+│ - Allowlist     │     │ - Tally results  │     │ - Transparent   │
+│   voters        │     │ - Enforce rules  │     │ - Verifiable    │
+└─────────────────┘     └──────────────────┘     └─────────────────┘
+         │                                               │
+         │                                               ▼
+         │                                    ┌─────────────────┐
+         └───────────▶  Wallet ──────────────▶│   IPFS          │
+                      (MetaMask)              │   (Metadata)    │
+                                              └─────────────────┘
+```
+
+1. **Organizer** deploys the smart contract and becomes the owner
+2. **Owner** adds candidates and authorizes voters (allowlist)
+3. **Voters** connect their wallet and cast one vote each
+4. **Votes** are recorded on-chain with full transparency
+5. **Results** are publicly verifiable in real-time
+
+---
+
 ## Project Structure
 
 ```
 MetaBallot/
 ├── contracts/           # Solidity smart contracts
-│   └── VotingContract.sol
+│   └── Create.sol       # Main voting contract
 ├── context/            # React context for state management
 │   ├── Voter.js        # Voting logic & blockchain interaction
 │   └── constants.js    # Contract addresses & network config
@@ -122,11 +172,10 @@ NEXT_PUBLIC_NETWORK=holesky
 
 # Pinata IPFS (for metadata storage)
 NEXT_PUBLIC_PINATA_API_KEY=your_api_key
-NEXT_PUBLIC_PINATA_SECRECT_KEY=your_secret_key
+NEXT_PUBLIC_PINATA_SECRET_KEY=your_secret_key
 NEXT_PUBLIC_PINATA_POST_URL=https://api.pinata.cloud/pinning/pinFileToIPFS
 NEXT_PUBLIC_PINATA_POST_JSON_URL=https://api.pinata.cloud/pinning/pinJSONToIPFS
 NEXT_PUBLIC_PINATA_HASH_URL=https://gateway.pinata.cloud/ipfs/
-NEXT_PUBLIC_PINATA_POST_JSON_URL=https://api.pinata.cloud/pinning/pinJSONToIPFS
 ```
 
 ### Running Locally
@@ -225,6 +274,42 @@ Update `NEXT_PUBLIC_NETWORK` in `.env` to match.
    - Register voters: `/allowed-voters`
    - Add candidates: `/candidate-regisration`
    - View voter list: `/voterList`
+
+---
+
+## Troubleshooting
+
+### MetaMask Connection Issues
+- Make sure you're on the correct network (matching `NEXT_PUBLIC_NETWORK`)
+- Try disconnecting and reconnecting your wallet
+- Clear MetaMask cache: Settings → Advanced → Clear activity data
+
+### Contract Deployment Fails
+- Ensure you have sufficient testnet ETH in your wallet
+- Check that your RPC URL is correct in `hardhat.config.js`
+- Verify environment variables are properly set in `.env`
+
+### Votes Not Registering
+- Confirm your wallet address is in the allowlist
+- Verify you haven't already voted (one vote per wallet)
+- Check that you're connected to the right network
+
+### IPFS Upload Failures
+- Verify Pinata API keys are correct
+- Check rate limits on your Pinata account
+- Ensure candidate images are valid URLs
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
